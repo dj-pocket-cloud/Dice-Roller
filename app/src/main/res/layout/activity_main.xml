@@ -29,7 +29,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/divevalue1"
+            android:id="@+id/dievalue1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_column="0"
@@ -41,6 +41,7 @@
             android:id="@+id/sidebar1"
             android:layout_width="207dp"
             android:layout_height="wrap_content"
+            android:contentDescription="Choose Number of Sides"
             android:max="5"
             android:progress="2"
             app:layout_column="0"
@@ -77,6 +78,11 @@
             android:layout_height="35dp"
             android:ems="10"
             android:inputType="number"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
             app:layout_column="1"
             app:layout_row="4" />
 
@@ -96,9 +102,10 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/rollButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="Roll Die"
             android:text="Roll"
             app:layout_column="0"
             app:layout_columnSpan="2"
