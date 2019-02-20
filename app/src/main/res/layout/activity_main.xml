@@ -13,7 +13,7 @@
         android:padding="@dimen/default_gap"
         app:alignmentMode="alignBounds"
         app:columnCount="2"
-        app:rowCount="9"
+        app:rowCount="10"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="55dp">
 
@@ -104,6 +104,14 @@
             app:layout_columnSpan="2"
             app:layout_gravity="fill_horizontal"
             app:layout_row="7" />
+
+        <TextView
+            android:id="@+id/guessresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="result"
+            android:textColor="#FFFF0000"
+            app:layout_gravity="center_horizontal" />
 
     </android.support.v7.widget.GridLayout>
 </android.support.constraint.ConstraintLayout>
