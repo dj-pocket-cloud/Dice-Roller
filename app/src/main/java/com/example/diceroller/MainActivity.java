@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
     private String negativeColor = "#FFFF0000"; //so FF at the beginning is fully visible, while 00 functionally hides the object with that color
     private String transparentColor = "#00000000";
 
-    private int coinimg = R.drawable.placeholder;
-    private int d4img = R.drawable.placeholder;
-    private int diceimg = R.drawable.placeholder;
-    private int d8img = R.drawable.placeholder;
-    private int d10img = R.drawable.placeholder;
-    private int d20img = R.drawable.placeholder;
+    private int coinimg = R.drawable.coin;
+    private int d4img = R.drawable.d4dice;
+    private int diceimg = R.drawable.dice;
+    private int d8img = R.drawable.d8dice;
+    private int d10img = R.drawable.d10dice;
+    private int d20img = R.drawable.d20dice;
 
 
 
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         sidebar1.setOnSeekBarChangeListener(seekBarListener);
         sidesChanged();
         clearGuessText();
+        changePicture(sides);
 
         //set integer guess variable whenever the guess textfield is changed
         guessesvalue1.addTextChangedListener(new TextWatcher() {
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             sides = getNumSides(progress+1);
             sidesChanged();
             changePicture(sides);
+            dieValue1.setText("");
             clearGuessText();
         }
 
