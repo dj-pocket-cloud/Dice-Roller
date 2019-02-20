@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Dice Roller</string>
+    <string name="probability_value" />
+    <string name="side_value" />
+    <string name="die_value" />
 </resources>
