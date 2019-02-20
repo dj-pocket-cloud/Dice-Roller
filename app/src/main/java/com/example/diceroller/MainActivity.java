@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable; // for EditText event handling
 import android.text.TextWatcher; // EditText listener
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText; // for bill amount input
 import android.widget.SeekBar; // for changing the tip percentage
 import android.widget.SeekBar.OnSeekBarChangeListener; // SeekBar listener
 import android.widget.TextView;
 import android.widget.ImageView;
 import java.text.NumberFormat;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText guessesvalue1;
     private TextView guessresult;
     private ImageView diceimg1;
+    private TextView dieValue1;
+    private Button rollButton;
     private String guessText;
     private static final NumberFormat percentFormat = NumberFormat.getPercentInstance();
     private int sides = 6;
@@ -44,9 +49,14 @@ public class MainActivity extends AppCompatActivity {
 
         probability_value = (TextView) findViewById(R.id.probability_value);
         sidevalue1 = (TextView) findViewById(R.id.sidevalue1);
+        dieValue1 = (TextView) findViewById(R.id.divevalue1);
         guessesvalue1 = (EditText) findViewById(R.id.guessesvalue1);
         guessresult = (TextView) findViewById(R.id.guessresult);
         diceimg1 = (ImageView) findViewById(R.id.diceimg1);
+
+        rollButton = (Button) findViewById(R.id.button);
+        rollButton.setOnClickListener(rollButtonListener);
+
 
         SeekBar sidebar1 = (SeekBar) findViewById(R.id.sidebar1);
         sidebar1.setOnSeekBarChangeListener(seekBarListener);
@@ -100,6 +110,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private final View.OnClickListener rollButtonListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            rollDie();
+            checkGuess();
+        }
+    };
+
 
     private int getNumSides(int sliderValue){
         if(sliderValue<6)
@@ -109,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changePicture(int value) {
-        switch(value) {
+        switch (value) {
             case 2:
                 diceimg1.setImageResource(coinimg);
                 break;
@@ -129,6 +147,12 @@ public class MainActivity extends AppCompatActivity {
                 diceimg1.setImageResource(d20img);
                 break;
         }
+    }
+
+    private void rollDie(){
+        Random rand = new Random();
+        result = rand.nextInt(sides)+1;
+        dieValue1.setText(String.valueOf(result));
     }
 
     private void checkGuess() {
