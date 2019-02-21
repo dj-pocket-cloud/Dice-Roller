@@ -162,11 +162,11 @@ public class MainActivity extends AppCompatActivity {
             if (result == guess) {
                 //update guessresult with positive message
                 guessresult.setTextColor(Color.parseColor(positiveColor));
-                guessresult.setText("Correct!");
+                guessresult.setText(R.string.correct_guess_text);
             } else {
                 //update guessresult with negative message
                 guessresult.setTextColor(Color.parseColor(negativeColor));
-                guessresult.setText("Incorrect!");
+                guessresult.setText(R.string.incorrect_guess_text);
             }
         }
     }

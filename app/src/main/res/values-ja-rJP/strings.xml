@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ダイスローラー</string>
+    <string name="guess_text">入力</string>
+    <string name="side_text">サイド</string>
+    <string name="prob_text">チャンス</string>
+    <string name="roll_text">ロール</string>
+    <string name="correct_guess_text">正しい!</string>
+    <string name="incorrect_guess_text">少ししかの運!</string>
+    <string name="sides_text_desc">サイド</string>
+    <string name="dice_value_desc">結果</string>
+    <string name="image_desc">さいころ</string>
+    <string name="sidebar_desc">辺の数を選ぶ</string>
+    <string name="guesses_value_desc">入力</string>
+    <string name="probability_text_desc">チャンス</string>
+    <string name="button_desc">ロール</string>
+    <string name="guess_result_desc">入力結果</string>
+    <string name="probability_value_desc">チャンス率</string>
+    <string name="guesses_text_desc">入力</string>
+</resources>

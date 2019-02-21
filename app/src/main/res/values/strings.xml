@@ -3,4 +3,21 @@
     <string name="probability_value" />
     <string name="side_value" />
     <string name="die_value" />
+    <string name="guess_text">Guess</string>
+    <string name="side_text">Sides</string>
+    <string name="prob_text">Probability</string>
+    <string name="roll_text">Roll</string>
+    <string name="correct_guess_text">Correct!</string>
+    <string name="incorrect_guess_text">Incorrect!</string>
+    <string name="image_desc">Dice</string>
+    <string name="sides_text_desc">Sides</string>
+    <string name="dice_value_desc">Result</string>
+    <string name="sidebar_desc">Choose number of sides</string>
+    <string name="guesses_text_desc">Guesses</string>
+    <string name="side_value_desc">Number of sides</string>
+    <string name="guesses_value_desc">Input guess</string>
+    <string name="probability_text_desc">Probability</string>
+    <string name="probability_value_desc">Percent probability</string>
+    <string name="button_desc">Roll</string>
+    <string name="guess_result_desc">Guess result</string>
 </resources>
