@@ -83,6 +83,7 @@
             android:layout_height="35dp"
             android:contentDescription="@string/guesses_value_desc"
             android:ems="10"
+            android:maxLength="2"
             android:inputType="number"
             android:padding="5dp"
             android:paddingLeft="5dp"
